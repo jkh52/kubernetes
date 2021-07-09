@@ -1936,6 +1936,7 @@ function prepare-konnectivity-server-manifest {
   params+=("--authentication-audience=system:konnectivity-server")
   params+=("--kubeconfig-qps=75")
   params+=("--kubeconfig-burst=150")
+  params+=("--keepalive-time=5s")
   konnectivity_args=""
   for param in "${params[@]}"; do
     konnectivity_args+=", \"${param}\""
