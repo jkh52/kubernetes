@@ -1979,6 +1979,7 @@ function prepare-konnectivity-server-manifest {
   fi
   params+=("--cluster-cert=/etc/srv/kubernetes/pki/apiserver.crt")
   params+=("--cluster-key=/etc/srv/kubernetes/pki/apiserver.key")
+  params+=("--delete-existing-uds-file=true")
   if [[ "${KONNECTIVITY_SERVICE_PROXY_PROTOCOL_MODE:-grpc}" == 'grpc' ]]; then
     params+=("--mode=grpc")
     params+=("--server-port=0")
